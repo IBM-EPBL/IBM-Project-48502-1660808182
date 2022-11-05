@@ -4,7 +4,7 @@ import os
 import operator
 import cv2
 from tensorflow.keras.models import load_model
-from tensorflow.keras.utils import load_img, img_to_array
+# from tensorflow.keras.utils import load_img, img_to_array
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__,template_folder="templates")
