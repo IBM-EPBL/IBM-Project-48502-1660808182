@@ -12,8 +12,7 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__,template_folder="templates") # initializing a flask app
 # Loading the model
-model = load_model(
-    r'C:\Users\adhar\Desktop\Nalaiya Thiran 2\IBM-Project-48502-1660808182\Project Development phase\Sprint4\gesture.h5')
+model = load_model(r'C:\\Users\adhar\\Desktop\\Nalaiya Thiran 2\\IBM-Project-48502-1660808182\\Project Development phase\\Sprint4\\model\\gesture.h5')
 print("Loaded model from disk")
 
 
