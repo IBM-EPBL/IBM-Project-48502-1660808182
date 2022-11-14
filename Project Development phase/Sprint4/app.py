@@ -6,13 +6,14 @@ import cv2 # opencv library
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
-from tensorflow.keras.models import load_model#to load our trained model
+from tensorflow.keras.models import load_model #to load our trained model
 import os
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__,template_folder="templates") # initializing a flask app
 # Loading the model
-model=load_model(r'D:\IBM Project\front-end\FLASK\gesture.h5')
+model = load_model(
+    r'C:\Users\adhar\Desktop\Nalaiya Thiran 2\IBM-Project-48502-1660808182\Project Development phase\Sprint4\gesture.h5')
 print("Loaded model from disk")
 
 
