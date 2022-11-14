@@ -12,7 +12,7 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__,template_folder="templates") # initializing a flask app
 # Loading the model
-model = load_model(r'C:\\Users\adhar\\Desktop\\Nalaiya Thiran 2\\IBM-Project-48502-1660808182\\Project Development phase\\Sprint4\\model\\gesture.h5')
+model = load_model(r'.\\model\\gesture.h5')
 print("Loaded model from disk")
 
 
@@ -133,14 +133,13 @@ def launch():
             
             
             interrupt = cv2.waitKey(10)
-            if interrupt & 0xFF == 27: # esc key
+            if interrupt and 0xFF == 27: # esc key
                 break
-                
-         
+            
         cap.release()
         cv2.destroyAllWindows()
     return render_template("home.html")
      
 if __name__ == "__main__":
    # running the app
-    app.run(debug=False)
+    app.run(debug=True)
